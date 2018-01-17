@@ -76,12 +76,12 @@ npm run tsc
 - TypeScript 前端工程构建
 
 ```bash
-npm run tsc
+npm run build
 ```
 
 #### 5.4 打包部署
 
-1. 先运行 `npm run build` 构建 TypeScript Egg 代码和 TypeScript 前端代码
+1. 先运行 `npm run tsc` 和 `npm run build` 构建 TypeScript Egg 代码和 TypeScript 前端代码
 2. 项目代码和构建代码一起打包代码
 3. 应用部署后，通过 `npm start` 启动应用
 
