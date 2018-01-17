@@ -1,0 +1,21 @@
+{
+  "extends": "./config/tsconfig.json",
+  "compileOnSave": true,
+  "compilerOptions": {
+    "target": "es2017",
+    "module": "commonjs"
+  },
+  "include": [
+    "index.ts",
+    "app/**/*.ts",
+    "config/**/*.ts",
+    "mock/**/*.ts",
+    "test/**/*.ts"
+  ],
+  "exclude": [
+    "public",
+    "app/web",
+    "app/public",
+    "app/view"
+  ]
+}

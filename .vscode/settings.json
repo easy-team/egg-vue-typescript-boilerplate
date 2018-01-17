@@ -1,0 +1,16 @@
+{
+  "files.exclude": {
+    "USE_GITIGNORE": true,
+    "**/*.js": {
+      "when": "$(basename).ts"
+    }
+  },
+  "path-intellisense.mappings": {
+    "lib": "${workspaceRoot}/app/web/lib",
+    "asset": "${workspaceRoot}/app/web/asset",
+    "component": "${workspaceRoot}/app/web/component",
+    "page": "${workspaceRoot}/app/web/page",
+    "store": "${workspaceRoot}/app/web/store",
+  },
+  "typescript.tsdk": "node_modules/typescript/lib"
+}
