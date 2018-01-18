@@ -1,6 +1,6 @@
 {
   "name": "egg-vue-typescript-boilerplate",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "基于 easywebpack-vue 和 egg-view-vue-ssr 插件的 egg + vue + typescript 服务端渲染同构工程骨架项目",
   "scripts": {
     "tsc": "tsc -p tsconfig.json",
