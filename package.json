@@ -39,8 +39,7 @@
     "vue-router": "^3.0.1",
     "vue-server-renderer": "^2.5.3",
     "vuex": "^3.0.1",
-    "vuex-router-sync": "^5.0.0",
-    "webpack-manifest-plugin": "^1.3.2"
+    "vuex-router-sync": "^5.0.0"
   },
   "devDependencies": {
     "autod-egg": "^1.0.0",
@@ -80,7 +79,6 @@
     "uglifyjs-webpack-plugin": "^1.1.2",
     "vconsole": "^3.0.0",
     "vue-template-compiler": "^2.4.4",
-    "webpack-manifest-plugin": "*",
     "webpack-manifest-resource-plugin": "^2.0.2"
   },
   "engines": {
