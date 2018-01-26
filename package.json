@@ -11,7 +11,7 @@
     "build:test": "cross-env easywebpack build test",
     "build:prod": "cross-env easywebpack build prod",
     "dev": "npm run tsc:w & node index.js",
-    "start": "NODE_ENV=production EGG_SERVER_ENV=prod node index.js",
+    "start": "cross-env NODE_ENV=production EGG_SERVER_ENV=prod node index.js",
     "start:test": "cross-env EGG_SERVER_ENV=test node index.js",
     "kill": "pkill --signal SIGINT egg-vue-webpack-boilerplate",
     "kill-mac": "kill -9 $(lsof -i:7001 |grep 'node'|awk '{print $2}')",
