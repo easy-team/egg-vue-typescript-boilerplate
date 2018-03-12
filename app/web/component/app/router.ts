@@ -7,8 +7,8 @@ import ListView from './list.vue';
 Vue.use(VueRouter);
 
 const router = new VueRouter({
-  mode: 'history',
   base: '/app',
+  mode: 'history',
   routes: [
     {
       path: '/',

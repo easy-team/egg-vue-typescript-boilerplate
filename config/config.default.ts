@@ -1,9 +1,9 @@
 import { Application, EggAppConfig } from 'egg';
-import * as path from 'path';
 import * as fs from 'fs';
+import * as path from 'path';
 
-export default (app : EggAppConfig) => {
-  const exports : any = {};
+export default (app: EggAppConfig) => {
+  const exports: any = {};
 
   exports.siteFile = {
     '/favicon.ico': fs.readFileSync(path.join(app.baseDir, 'app/web/asset/images/favicon.ico'))

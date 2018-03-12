@@ -1,5 +1,5 @@
-import * as Model from '../../mocks/article/list';
 import { Controller } from 'egg';
+import * as Model from '../../mocks/article/list';
 export default class AppController extends Controller {
   async index() {
     await this.ctx.render('app/app.js', {

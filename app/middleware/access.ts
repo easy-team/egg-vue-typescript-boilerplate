@@ -2,7 +2,7 @@ import * as path from 'path';
 import * as util from 'util';
 export default () => {
   const skipExt = [ '.png', '.jpeg', '.jpg', '.ico', '.gif' ];
-  return function* (next) {
+  return function*(next) {
     const start = new Date().getTime();
 
     yield* next;
@@ -31,4 +31,3 @@ export default () => {
     }
   };
 };
-

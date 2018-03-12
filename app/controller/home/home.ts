@@ -1,5 +1,5 @@
-import * as Model from '../../mocks/article/list';
 import { Controller } from 'egg';
+import * as Model from '../../mocks/article/list';
 export default class HomeController extends Controller {
   async index() {
     const { ctx } = this;

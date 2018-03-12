@@ -6,7 +6,9 @@
     "jsRules": {},
     "rules": {
         "quotemark": [true, "single", "jsx-double"],
-        "eofline": false
-    },
-    "rulesDirectory": ["app/web/"]
+        "eofline": false,
+        "object-literal-sort-keys": false,
+        "trailing-comma": false,
+        "member-access": false
+    }
 }
