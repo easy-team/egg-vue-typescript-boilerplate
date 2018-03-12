@@ -1,6 +1,6 @@
 # egg-vue-typescript-boilerplate
 
-基于 Egg + Vue + TypeScript + Element + Webpack4 多页面和单页面服务端客户端渲染同构工程骨架项目.
+基于 Egg + Vue + TypeScript + Element + Webpack4 多页面和单页面服务端客户端渲染同构工程骨架项目, Webpack3 构建请见 [webpack3](https://github.com/hubcarl/egg-vue-typescript-boilerplate/tree/webpack3).
 
 ## 1. 版本
 
@@ -38,9 +38,9 @@
 
 ## 4. 依赖
 
-- [easywebpack-vue](https://github.com/hubcarl/easywebpack) ^3.5.0
+- [easywebpack-vue](https://github.com/hubcarl/easywebpack) ^4.x.x
 - [egg-view-vue-ssr](https://github.com/hubcarl/egg-view-vue-ssr) ^3.0.2
-- [egg-webpack](https://github.com/hubcarl/egg-webpack) ^3.2.6
+- [egg-webpack](https://github.com/hubcarl/egg-webpack) ^4.x.x
 - [egg-webpack-vue](https://github.com/hubcarl/egg-webpack-vue) ^2.0.0
 
 ## 5. 使用
