@@ -1,12 +1,12 @@
 # egg-vue-typescript-boilerplate
 
-基于 Egg + Vue + TypeScript + Element + Webpack3 多页面和单页面服务端客户端渲染同构工程骨架项目.
+基于 Egg + Vue + TypeScript + Element + Webpack4 多页面和单页面服务端客户端渲染同构工程骨架项目.
 
 ## 1. 版本
 
 - Egg 版本： ^2.x.x
 - Node 版本: Node ^8.x.x+,
-- Webpack 版本: ^3.10.1
+- Webpack 版本: ^4.0.0
 - Vue 版本: ^2.5.0
 - TypeScript: ^2.6.2
 - Element UI
@@ -33,7 +33,7 @@
 
 - 支持 Webpack DLL 自动化构建
 
-- 支持 Vue组件服务端渲染异步加载
+- 支持 Vue 组件服务端渲染异步加载
  
 
 ## 4. 依赖
@@ -49,7 +49,6 @@
 
 ```bash
 npm install
-npm start
 ```
 
 #### 5.2 启动应用
