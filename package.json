@@ -58,6 +58,7 @@
     "eslint": "^4.3.0",
     "eslint-config-egg": "^5.0.0",
     "eslint-plugin-vue": "^2.0.1",
+    "http2": "^3.3.7",
     "imagemin-webpack-plugin": "^1.5.2",
     "ip": "^1.1.5",
     "less": "^2.7.2",

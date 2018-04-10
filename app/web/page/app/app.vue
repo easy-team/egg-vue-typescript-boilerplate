@@ -1,17 +1,22 @@
 <template>
-  <app-layout>
+  <Layout>
     <transition name="fade" mode="out-in">
       <router-view></router-view>
     </transition>
-  </app-layout>
+  </Layout>
 </template>
 <script type="ts">
-  export default {
-    computed: {
+import clientRender from 'client';
+import router from 'component/app/router';
+import Layout from 'component/layout/app/index.ts';
+import serverRender from 'server';
+import store from './store/app';
+import { sync } from 'vuex-router-sync';
 
-    },
-    mounted(){
+sync(store, router);
 
-    }
-  };
+export default {
+  router,
+  store
+}
 </script>
