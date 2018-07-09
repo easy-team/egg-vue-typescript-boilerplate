@@ -1,37 +1,37 @@
-import { Application, EggAppConfig } from 'egg';
+import { EggAppConfig } from 'egg';
 import * as fs from 'fs';
 import * as path from 'path';
 
 export default (app: EggAppConfig) => {
-  const exports: any = {};
+  const config: any = {};
 
-  exports.siteFile = {
+  config.siteFile = {
     '/favicon.ico': fs.readFileSync(path.join(app.baseDir, 'app/web/asset/images/favicon.ico'))
   };
 
-  exports.view = {
+  config.view = {
     cache: false
   };
 
-  exports.vuessr = {
+  config.vuessr = {
     layout: path.join(app.baseDir, 'app/web/view/layout.html')
   };
 
-  exports.logger = {
+  config.logger = {
     consoleLevel: 'DEBUG',
     dir: path.join(app.baseDir, 'logs')
   };
 
-  exports.static = {
+  config.static = {
     prefix: '/public/',
     dir: path.join(app.baseDir, 'public')
   };
 
-  exports.keys = '123456';
+  config.keys = '123456';
 
-  exports.middleware = [
+  config.middleware = [
     'access'
   ];
 
-  return exports;
+  return config;
 };

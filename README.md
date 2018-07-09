@@ -19,9 +19,11 @@
 
 ## 3. 特性
 
-- 支持 Egg Node 端代码 和 前端代码 TypeScript 编写和构建
+- 支持 Egg Node 端代码和前端代码 TypeScript 编写和构建
 
-- 支持 async和 await 特性, Controller 采用 class 方式编写
+- 支持本地开发 ts-node 运行，本地开发无需运行 tsc 命令
+
+- 支持 async 和 await 特性, Controller 采用 class 方式编写
 
 - 支持 server 和 client 端代码修改, Webpack 时时编译和热更新, `npm run dev` 一键启动应用
 
@@ -53,8 +55,6 @@ npm install
 
 #### 5.2 启动应用
 
-首次运行请先运行一次 `npm run tsc`
-
 ```bash
 npm run dev
 ```
@@ -64,7 +64,7 @@ npm run dev
 ![npm start启动](https://github.com/hubcarl/egg-vue-webpack-boilerplate/blob/master/docs/images/webpack-build.png)
 
 
-#### 5.3 构建
+#### 5.3 构建文件
 
 - TypeScript Egg 构建
 
@@ -77,6 +77,8 @@ npm run tsc
 ```bash
 npm run build
 ```
+
+当在本地运行了 `npm run tsc` 之后，本地开发时，记得 `npm run clean` 清楚 js 文件。
 
 #### 5.4 打包部署
 

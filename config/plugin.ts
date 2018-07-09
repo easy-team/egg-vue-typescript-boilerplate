@@ -1,6 +1,5 @@
-exports.static = true;
-
-exports.vuessr = {
-  enable: true,
-  package: 'egg-view-vue-ssr'
+export default {
+  vuessr: {
+    package: 'egg-view-vue-ssr'
+  }
 };
