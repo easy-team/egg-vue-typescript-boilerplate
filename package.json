@@ -4,7 +4,7 @@
   "description": "基于 easywebpack-vue 和 egg-view-vue-ssr 插件的 egg + vue + typescript 服务端渲染同构工程骨架项目",
   "scripts": {
     "start": "egg-scripts start",
-    "dev": "egg-bin dev -r 'egg-ts-helper/register'",
+    "dev": "egg-bin dev -r egg-ts-helper/register",
     "debug": "egg-bin debug",
     "tsc": "ets && tsc -p tsconfig.json",
     "clean": "ets clean",
