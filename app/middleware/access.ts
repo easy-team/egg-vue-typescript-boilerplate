@@ -1,33 +1,34 @@
 import * as path from 'path';
 import * as util from 'util';
+import { Context } from 'egg';
 export default () => {
   const skipExt = [ '.png', '.jpeg', '.jpg', '.ico', '.gif' ];
-  return function*(next) {
+  return async function access(ctx: Context, next: any) {
     const start = new Date().getTime();
 
-    yield* next;
+    await next();
 
-    const rs = Math.ceil(new Date().getTime() - start);
+    const rs: number = Math.ceil(new Date().getTime() - start);
 
-    this.set('X-Response-Time', rs);
+    ctx.set('X-Response-Time', String(rs));
 
-    const ext = path.extname(this.url).toLocaleLowerCase();
-    const isSkip = skipExt.indexOf(ext) !== -1 && this.status < 400;
+    const ext = path.extname(ctx.url).toLocaleLowerCase();
+    const isSkip = skipExt.indexOf(ext) !== -1 && ctx.status < 400;
 
     if (!isSkip) {
-      const ip = this.get('X-Real-IP') || this.ip;
-      const port = this.get('X-Real-Port');
-      const protocol = this.protocol.toUpperCase();
-      const method = this.method;
-      const url = this.url;
-      const status = this.status;
-      const length = this.length || '-';
-      const referrer = this.get('referrer') || '-';
-      const ua = this.get('user-agent') || '-';
-      const serverTime = this.response.get('X-Server-Response-Time') || '-';
+      const ip = ctx.get('X-Real-IP') || ctx.ip;
+      const port = ctx.get('X-Real-Port');
+      const protocol = ctx.protocol.toUpperCase();
+      const method = ctx.method;
+      const url = ctx.url;
+      const status = ctx.status;
+      const length = ctx.length || '-';
+      const referrer = ctx.get('referrer') || '-';
+      const ua = ctx.get('user-agent') || '-';
+      const serverTime = ctx.response.get('X-Server-Response-Time') || '-';
       const message = util.format('[access] %s:%s - %s %s %s/%s %s %s %s %s %s',
         ip, port, method, url, protocol, status, length, referrer, rs, serverTime, ua);
-      this.logger.info(message);
+      ctx.logger.info(message);
     }
   };
 };

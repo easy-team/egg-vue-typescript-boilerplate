@@ -1,8 +1,7 @@
 import { Application, EggAppConfig } from 'egg';
-import * as ip from 'ip';
 import * as path from 'path';
 
-export default (app: EggAppConfig) => {
+export default (appInfo: EggAppConfig) => {
   const exports: any = {};
 
   exports.static = {
@@ -15,22 +14,12 @@ export default (app: EggAppConfig) => {
   };
 
   exports.logview = {
-    dir: path.join(app.baseDir, 'logs')
+    dir: path.join(appInfo.baseDir, 'logs')
   };
 
   exports.vuessr = {
     injectCss: false
   };
-
-  const localIP = ip.address();
-  const domainWhiteList = [];
-  [7001, 9000, 9001].forEach((port) => {
-    domainWhiteList.push(`http://localhost:${port}`);
-    domainWhiteList.push(`http://127.0.0.1:${port}`);
-    domainWhiteList.push(`http://${localIP}:${port}`);
-  });
-
-  exports.security = { domainWhiteList };
 
   return exports;
 };

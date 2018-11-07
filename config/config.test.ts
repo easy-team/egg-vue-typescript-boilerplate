@@ -1,7 +1,7 @@
 
 import { Application, EggAppConfig } from 'egg';
 
-export default (app: EggAppConfig) => {
+export default (appInfo: EggAppConfig) => {
   const exports: any = {};
 
   return exports;

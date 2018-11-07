@@ -1,12 +1,19 @@
 {
   "extends": "../../config/tsconfig.json",
   "compilerOptions": {
+    "target": "es5",      
+    "module": "esnext",
+    "sourceMap": true,
     "lib": [
       "es6",
-      "dom"
+      "dom",
+      "es2017",
+      "esnext"
     ]
   },
- 
+  "include": [
+    "./**/*.ts",
+  ],
   "exclude": [
     "node_modules",
     "**/*.spec.ts"

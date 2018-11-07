@@ -1,12 +1,12 @@
 /**
- * 生产环境配置
+ * production
  *
- * 最终生效的配置为 prod + default（前者覆盖后者）
+ *  prod + default（override）
  */
 
 import { Application, EggAppConfig } from 'egg';
 
-export default (app: EggAppConfig) => {
+export default (appInfo: EggAppConfig) => {
   const exports: any = {};
 
   return exports;

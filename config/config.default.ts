@@ -2,11 +2,11 @@ import { EggAppConfig } from 'egg';
 import * as fs from 'fs';
 import * as path from 'path';
 
-export default (app: EggAppConfig) => {
+export default (appInfo: EggAppConfig) => {
   const config: any = {};
 
   config.siteFile = {
-    '/favicon.ico': fs.readFileSync(path.join(app.baseDir, 'app/web/asset/images/favicon.ico'))
+    '/favicon.ico': fs.readFileSync(path.join(appInfo.baseDir, 'app/web/asset/images/favicon.ico'))
   };
 
   config.view = {
@@ -14,23 +14,27 @@ export default (app: EggAppConfig) => {
   };
 
   config.vuessr = {
-    layout: path.join(app.baseDir, 'app/web/view/layout.html')
+    layout: path.resolve(appInfo.baseDir, 'app/web/view/layout.html'),
+    renderOptions: {
+      basedir: path.join(appInfo.baseDir, 'app/view'),
+    },
   };
 
   config.logger = {
     consoleLevel: 'DEBUG',
-    dir: path.join(app.baseDir, 'logs')
+    dir: path.join(appInfo.baseDir, 'logs')
   };
 
   config.static = {
     prefix: '/public/',
-    dir: path.join(app.baseDir, 'public')
+    dir: path.join(appInfo.baseDir, 'public')
   };
 
   config.keys = '123456';
 
   config.middleware = [
-    'access'
+    'access',
+    'global'
   ];
 
   return config;

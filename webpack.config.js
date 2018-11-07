@@ -1,30 +1,17 @@
 'use strict';
-const path = require('path');
 module.exports = {
-  egg: true,
-  framework: 'vue',
   entry: {
-    include: ['app/web/page'],
-    exclude: ['app/web/page/[a-z]+/(component|store)'],
-    loader: {
-      client: 'app/web/framework/vue/entry/client-loader.ts',
-      server: 'app/web/framework/vue/entry/server-loader.ts',
-    }
+    'admin/home': 'app/web/page/admin/home/index.ts'
   },
-  alias: {
-    server: 'app/web/framework/vue/entry/server.ts',
-    client: 'app/web/framework/vue/entry/client.ts',
-    asset: 'app/web/asset',
-    component: 'app/web/component',
-    framework: 'app/web/framework',
-    vue: 'vue/dist/vue.esm.js'
-  },
-  dll: ['vue', 'axios', 'vue-router', 'vuex', 'vuex-router-sync'],
+  lib: ['vue', 'vuex', 'vue-router', 'vuex-router-sync', 'axios'],
   loaders: {
+    babel: false,
     typescript: true
   },
-  plugins: {},
-  done() {
-
+  plugins: {
+    copy: [{
+      from: 'app/web/asset',
+      to: 'asset'
+    }]
   }
 };
