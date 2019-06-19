@@ -1,6 +1,6 @@
 {
   "name": "egg-vue-typescript-boilerplate",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "description": "Egg + Vue + TypeScript 骨架项目",
   "scripts": {
     "start": "egg-scripts start",
