@@ -28,7 +28,7 @@
     "shortid": "^2.2.8",
     "showdown": "^1.8.6",
     "simplemde": "^1.11.2",
-    "axios": "^0.17.1",
+    "axios": "^0.18.1",
     "egg": "^2.3.0",
     "egg-scripts": "^2.10.0",
     "egg-cors": "^2.1.1",
