@@ -1,13 +1,13 @@
-// This file was auto created by egg-ts-helper
+// This file is created by egg-ts-helper@1.25.5
 // Do not modify this file!!!!!!!!!
 
-import 'egg'; // Make sure ts to import egg declaration at first
-import Access from '../../../app/middleware/access';
-import Global from '../../../app/middleware/global';
+import 'egg';
+import ExportAccess from '../../../app/middleware/access';
+import ExportGlobal from '../../../app/middleware/global';
 
 declare module 'egg' {
   interface IMiddleware {
-    access: typeof Access;
-    global: typeof Global;
+    access: typeof ExportAccess;
+    global: typeof ExportGlobal;
   }
 }

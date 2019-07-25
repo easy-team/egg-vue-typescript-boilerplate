@@ -5,7 +5,7 @@
   "scripts": {
     "start": "egg-scripts start",
     "dev": "egg-bin dev -r egg-ts-helper/register",
-    "debug": "egg-bin debug",
+    "debug": "egg-bin debug -r egg-ts-helper/register",
     "build": "easy build",
     "tsc": "ets && tsc -p tsconfig.json",
     "clean": "ets clean",
