@@ -6,6 +6,7 @@ Single Page Application Isomorphic Example for Egg + Vue, Front-End and Node of 
 
 - https://www.yuque.com/easy-team/egg-vue
 - https://www.yuque.com/easy-team/easywebpack
+- https://easyjs.cn
 
 
 ## QuickStart
