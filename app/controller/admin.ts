@@ -7,7 +7,6 @@ export default class AdminController extends Controller {
 
   public async login(ctx: Context) {
     await ctx.renderClient('admin/login.js', {});
-
   }
 
   public async home(ctx: Context) {
@@ -31,6 +30,6 @@ export default class AdminController extends Controller {
 
   public async detail(ctx: Context) {
     const { id } = ctx.params;
-    ctx.body = await ctx.service.article.query({ id });
+    ctx.body = await ctx.service.article.query({ id: Number(id) });
   }
 }

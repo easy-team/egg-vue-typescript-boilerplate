@@ -1,7 +1,7 @@
 <template>
   <div class="content" v-if="article">
     <h1>{{article.title}}</h1>
-    <iframe v-if="article.url" :src="article.url" frameborder="0" width="100%" height="600"></iframe>
+    <iframe v-if="article.url" :src="article.url" frameborder="0" width="100%" height="800"></iframe>
     <div class="marktext" v-else v-html="article.content"></div>
   </div>
 </template>

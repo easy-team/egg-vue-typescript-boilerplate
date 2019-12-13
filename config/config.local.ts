@@ -1,4 +1,4 @@
-import { Application, EggAppConfig } from 'egg';
+import { EggAppConfig } from 'egg';
 import * as path from 'path';
 
 export default (appInfo: EggAppConfig) => {
@@ -9,8 +9,8 @@ export default (appInfo: EggAppConfig) => {
   };
 
   exports.development = {
-    watchDirs: ['build'], // 指定监视的目录（包括子目录），当目录下的文件变化的时候自动重载应用，路径从项目根目录开始写
-    ignoreDirs: ['app/web', 'public', 'config'] // 指定过滤的目录（包括子目录）
+    // watchDirs: ['app/controller'], // 指定监视的目录（包括子目录），当目录下的文件变化的时候自动重载应用，路径从项目根目录开始写
+    ignoreDirs: ['app/web', 'public', 'config/manifest.json'] // 指定过滤的目录（包括子目录）
   };
 
   exports.logview = {

@@ -1,5 +1,7 @@
 # egg-vue-typescript-boilerplate
 
+基于 Egg + Vue + Webpack SSR 服务端渲染和 CSR 前端渲染工程骨架项目。
+
 Single Page Application Isomorphic Example for Egg + Vue, Front-End and Node of The Application are Written in TypeScript.
 
 ## Document
@@ -11,7 +13,7 @@ Single Page Application Isomorphic Example for Egg + Vue, Front-End and Node of 
 
 ## QuickStart
 
-- Development Mode
+- Development
 
 ```bash
 $ npm install -g easywebpack-cli
@@ -21,7 +23,7 @@ $ npm run dev
 $ open http://localhost:7001
 ```
 
-- Publish Mode
+- Publish
 
 ```bash
 npm run tsc
