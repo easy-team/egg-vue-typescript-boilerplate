@@ -6,7 +6,7 @@ import Condition from '../lib/condition';
 export default class AdminController extends Controller {
 
   public async login(ctx: Context) {
-    await ctx.renderClient('admin/login.js', {});
+    await ctx.render('admin/login.js', {});
   }
 
   public async home(ctx: Context) {
