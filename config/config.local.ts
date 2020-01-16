@@ -1,5 +1,6 @@
 import { EggAppConfig } from 'egg';
 import * as path from 'path';
+import { getWebpackConfig } from 'easywebpack-vue';
 
 export default (appInfo: EggAppConfig) => {
   const exports: any = {};
@@ -20,6 +21,11 @@ export default (appInfo: EggAppConfig) => {
   exports.vuessr = {
     injectCss: false
   };
+
+  exports.webpack = {
+    browser: false,
+    webpackConfigList: getWebpackConfig()
+  }
 
   return exports;
 };
