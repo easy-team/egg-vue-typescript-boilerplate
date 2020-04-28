@@ -39,9 +39,9 @@ npm start
 
 ## Rendering
 
-- Font-End TypeScript
+- Front-End TypeScript
 
-![Font-End TypeScript](https://github.com/easy-team/egg-vue-typescript-boilerplate/blob/master/docs/images/vue-front-end.png?raw=true)
+![Front-End TypeScript](https://github.com/easy-team/egg-vue-typescript-boilerplate/blob/master/docs/images/vue-front-end.png?raw=true)
 
 - Node TypeScript
 
