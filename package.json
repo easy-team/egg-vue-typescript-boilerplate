@@ -18,6 +18,13 @@
   },
   "dependencies": {
     "@hubcarl/json-typescript-mapper": "2.0.0",
+    "axios": "^0.18.1",
+    "egg": "^2.3.0",
+    "egg-cors": "^2.1.1",
+    "egg-scripts": "^2.10.0",
+    "egg-view-vue-ssr": "^3.0.5",
+    "egg-webpack": "^4.4.7",
+    "egg-webpack-vue": "^2.0.0",
     "element-ui": "^2.0.8",
     "extend": "~3.0.0",
     "font-awesome": "^4.7.0",
@@ -29,19 +36,12 @@
     "shortid": "^2.2.8",
     "showdown": "^1.8.6",
     "simplemde": "^1.11.2",
-    "axios": "^0.18.1",
-    "egg": "^2.3.0",
-    "egg-scripts": "^2.10.0",
-    "egg-cors": "^2.1.1",
-    "egg-webpack": "^4.4.7",
-    "egg-webpack-vue": "^2.0.0",
-    "egg-view-vue-ssr": "^3.0.5",
     "vue": "^2.5.0",
+    "vue-property-decorator": "^7.2.0",
     "vue-router": "^3.0.1",
     "vuex": "^3.0.1",
-    "vuex-router-sync": "^5.0.0",
-    "vue-property-decorator": "^7.2.0",
-    "vuex-class": "^0.3.1"
+    "vuex-class": "^0.3.1",
+    "vuex-router-sync": "^5.0.0"
   },
   "devDependencies": {
     "@types/lodash": "^4.14.117",
@@ -59,7 +59,7 @@
     "ts-node": "^7.0.1",
     "tslint": "^5.9.1",
     "tslint-loader": "^3.5.3",
-    "typescript": "^3.0.0"
+    "typescript": "^3.9.2"
   },
   "egg": {
     "typescript": true
