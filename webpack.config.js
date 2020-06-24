@@ -19,7 +19,11 @@ module.exports = {
   module:{
     rules:[
       { babel: false },
-      { typescript: true }
+      { 
+        ts: {
+          exclude: []
+        } 
+      }
     ]
   },
   plugins: [

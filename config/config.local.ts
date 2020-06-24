@@ -1,6 +1,6 @@
 import { EggAppConfig } from 'egg';
 import * as path from 'path';
-import { getWebpackConfig } from 'easywebpack-vue';
+import { getWebpackConfig } from '@easy-team/easywebpack-vue';
 
 export default (appInfo: EggAppConfig) => {
   const exports: any = {};
