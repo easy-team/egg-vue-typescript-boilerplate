@@ -1,10 +1,12 @@
 'use strict';
 const path = require('path');
+const tsImportPluginFactory = require('ts-import-plugin')
 const resolve = filepath => path.resolve(__dirname, filepath);
 module.exports = {
   entry: {
-    'admin/login': 'app/web/page/admin/login/login.vue',
-    'admin/home': 'app/web/page/admin/home/index.ts'
+    // 'admin/login': 'app/web/page/admin/login/login.vue',
+    // 'admin/home': 'app/web/page/admin/home/index.ts',
+    'vant': 'app/web/page/vant/index.vue'
   },
   resolve: {
     alias:{
@@ -21,6 +23,16 @@ module.exports = {
       { babel: false },
       { 
         ts: {
+          options: {
+            transpileOnly: true,
+            getCustomTransformers: () => ({
+              before: [ tsImportPluginFactory({
+                libraryName: 'vant',
+                libraryDirectory: 'es',
+                style: true
+              })]
+            }),
+          },
           exclude: []
         } 
       }
@@ -33,5 +45,8 @@ module.exports = {
         to: 'asset'
       }]
     }
-  ]
+  ],
+  compile: {
+    thread: false
+  }
 };

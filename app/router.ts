@@ -8,6 +8,7 @@ export default (application: Application) => {
   router.post('/admin/api/article/del', controller.admin.del);
   router.get('/admin/api/article/:id', controller.admin.detail);
   router.get('/', controller.admin.login);
+  router.get('/test/vant', controller.test.vant);
   router.get('/admin', controller.admin.home);
   router.get('/admin/*', controller.admin.home);
 };
