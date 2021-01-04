@@ -10,7 +10,11 @@ export default class AdminController extends Controller {
   }
 
   public async home(ctx: Context) {
-    await ctx.render('admin/home.js', { url: ctx.url.replace(/\/admin/, '') });
+    if (ctx.query.mode === 'csr') {
+      await ctx.renderClient('admin/home.js', { url: ctx.url.replace(/\/admin/, '') }, { viewEngine: null });
+    } else {
+      await ctx.render('admin/home.js', { url: ctx.url.replace(/\/admin/, '') });
+    }
   }
 
   public async list(ctx: Context) {
