@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "@hubcarl/json-typescript-mapper": "^2.0.0",
-    "axios": "^0.18.1",
+    "axios": "^0.21.1",
     "egg": "^2.3.0",
     "egg-cors": "^2.1.1",
     "egg-scripts": "^2.10.0",
