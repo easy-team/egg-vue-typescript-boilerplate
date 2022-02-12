@@ -13,7 +13,7 @@
     "kill": "easy kill",
     "lint": "tslint --project . -c tslint.json",
     "fix": "tslint --fix --project . -c tslint.json",
-    "ii": "npm install --registry https://registry.npm.taobao.org",
+    "ii": "npm install --registry https://registry.npmmirror.com",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s"
   },
   "dependencies": {
